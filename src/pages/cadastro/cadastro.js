@@ -10,7 +10,7 @@ import zoro from '../../layout/register/zoro_confused.png';
 
 
 
-var captcha = false;
+var captcha = true;//false;
 
 function validar_email(text){
   let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

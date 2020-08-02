@@ -86,6 +86,8 @@ function setErroCadastro(numero){
   function logar(dados_login){
     //console.log(dados_login.email);
     //console.log(dados_login.password);
+    console.log('passando pra o socket')
+    socket.emit('teste','oi');
     socket.emit('logar', dados_login);
     return; 
   }

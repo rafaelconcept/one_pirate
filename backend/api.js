@@ -1,9 +1,19 @@
-import axios from 'axios';
+module.exports = {
 
-const api = axios.create({
-    baseURL: 'http://192.168.1.105:3333'
-    //baseURL: 'http://10.0.3.2:3333' 
-});
+    teste(){
+        console.log('guruguru');
+        //return 'http://192.168.1.105:3333';
+    },
+
+    base(){
+        return 'http://192.168.1.105:3333';
+    }
+    
+
+  }
+  
+  
+  
 
 
-export default api;
+
