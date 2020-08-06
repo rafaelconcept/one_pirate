@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import socketIOClient from "socket.io-client";
+
 
 
 import { Container } from './index_css.js';
@@ -18,12 +18,17 @@ import Cadastro from './cadastro/cadastro';
 
 
 
+//import socketIOClient from "socket.io-client";
+
+const socket = require('../components/sockets/main_front_socket').socket();
+///console.log('socket');
+//console.log(`aberto: ${socket.id}`)
 
 const Pages=()=> {
 
 
   
-  const socket = socketIOClient('http://192.168.1.105:3333/');
+  //const socket = socketIOClient('http://192.168.1.105:3333/');
   
   socket.on('logar',data=>{
     if(data.logado == true){

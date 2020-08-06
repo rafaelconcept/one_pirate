@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
     //lista de todas do socket
     require('./route_socket')(socket);
 
-    //console.log(`Socket conectado:${socket.id}`);
+    console.log(`Socket conectado:${socket.id}`);
   });
 
 

@@ -7,7 +7,7 @@ module.exports = function(socket) {
 
 //Cadastrar
     socket.on('cadastrar', data =>{
-
+        console.log(`Socket enviado:${socket.id}`);
         axios.post(baseURL+'/register', data)
         .then((res) => {    
             socket.emit('cadastrar', res.data)

@@ -7,6 +7,7 @@ import luffy from '../../layout/register/luffy_confused.png';
 import zoro from '../../layout/register/zoro_confused.png';
 
 
+const socket = require('../../components/sockets/main_front_socket').socket();
 
 
 
@@ -70,7 +71,11 @@ function cadastro(props) {
       props.setErro(4)
       return;
     }
-    
+    var info = {
+      'email':email.email1,
+      'pass':password.password1,
+    }
+    //socket.emit('cadastrar', info);
     props.setCadastro({email:email.email1,password:password.password1})
   
   }
